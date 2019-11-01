@@ -1,0 +1,41 @@
+
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: 'Kairos.Generator.Json.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+- task: DotNetCoreCLI@2
+  displayName: Run build
+  inputs:
+    command: build
+    projects: '$(solution)'
+    arguments: '--configuration $(buildConfiguration)'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Run unit tests'
+  inputs:
+    command: test
+    projects: '$(solution)'
+    arguments: -c $(BuildConfiguration) --collect:"XPlat Code Coverage"
+    nobuild: true
+
+- task: DotNetCoreCLI@2
+  displayName: 'Install ReportGenerator tool'
+  inputs:
+    command: custom
+    custom: tool
+    arguments: install --tool-path . dotnet-reportgenerator-globaltool
+
+- script: reportgenerator -reports:$(Agent.TempDirectory)/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)/coverlet/reports -reporttypes:"Cobertura"
+  displayName: 'Create reports'
+
+- task: PublishCodeCoverageResults@1
+  displayName: 'Publish code coverage'
+  inputs:
+    codeCoverageTool: Cobertura
+    summaryFileLocation: $(Build.SourcesDirectory)/coverlet/reports/Cobertura.xml

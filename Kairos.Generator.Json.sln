@@ -11,6 +11,10 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Kairos.Generator.Json", "sr
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Kairos.Generator.Randomizer", "src\Kairos.Generator.Randomizer\Kairos.Generator.Randomizer.fsproj", "{6145D8D9-4199-43E3-8B7B-85A5046A90DC}"
 EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Kairos.Generator.Json.Tests", "tests\Kairos.Generator.Json.Tests\Kairos.Generator.Json.Tests.fsproj", "{D4B1716F-B06E-47B2-9073-DC7BEB8FA485}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Kairos.Generator.Randomizer.Tests", "tests\Kairos.Generator.Randomizer.Tests\Kairos.Generator.Randomizer.Tests.fsproj", "{EA9F4C45-6C0B-4A0A-AF27-3095325CF125}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,14 @@ Global
 		{6145D8D9-4199-43E3-8B7B-85A5046A90DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6145D8D9-4199-43E3-8B7B-85A5046A90DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6145D8D9-4199-43E3-8B7B-85A5046A90DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4B1716F-B06E-47B2-9073-DC7BEB8FA485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B1716F-B06E-47B2-9073-DC7BEB8FA485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4B1716F-B06E-47B2-9073-DC7BEB8FA485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4B1716F-B06E-47B2-9073-DC7BEB8FA485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA9F4C45-6C0B-4A0A-AF27-3095325CF125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA9F4C45-6C0B-4A0A-AF27-3095325CF125}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA9F4C45-6C0B-4A0A-AF27-3095325CF125}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA9F4C45-6C0B-4A0A-AF27-3095325CF125}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +44,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{061E54A5-738C-4246-93E8-D4F12B5E5BFC} = {67B9A87C-8745-465F-9383-64D295E3F065}
 		{6145D8D9-4199-43E3-8B7B-85A5046A90DC} = {67B9A87C-8745-465F-9383-64D295E3F065}
+		{D4B1716F-B06E-47B2-9073-DC7BEB8FA485} = {5E86EA9E-096F-4BDA-9F2F-D630CFBC6913}
+		{EA9F4C45-6C0B-4A0A-AF27-3095325CF125} = {5E86EA9E-096F-4BDA-9F2F-D630CFBC6913}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {15D6B593-4BBC-478A-AAC1-4451217FAC58}
