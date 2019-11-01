@@ -10,18 +10,18 @@ variables:
 
 steps:
 - task: DotNetCoreCLI@2
-  displayName: Run build
+  displayName: 'dotnet build $(buildConfiguration)'
   inputs:
     command: build
     projects: '$(solution)'
     arguments: '--configuration $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
-  displayName: 'Run unit tests'
+  displayName: 'dotnet test $(buildConfiguration)'
   inputs:
     command: test
     projects: 'tests/*.Tests/*.fsproj'
-    arguments: -c $(BuildConfiguration) --collect:"XPlat Code Coverage"
+    arguments: -c $(buildConfiguration) --collect:"XPlat Code Coverage"
     nobuild: true
 
 - task: DotNetCoreCLI@2
@@ -40,8 +40,13 @@ steps:
     codeCoverageTool: Cobertura
     summaryFileLocation: $(Build.SourcesDirectory)/coverlet/reports/Cobertura.xml
 
-- task: PublishPipelineArtifact@1
-  displayName: 'Publish build artifact'
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet publish $(buildConfiguration)'
   inputs:
-    path: $(System.DefaultWorkingDirectory)/bin/buildArtifact
-    artifact: Kairos.Generator.Json
+    command: publish
+    projects: '$(solution)'
+    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: True
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish build artifacts'
