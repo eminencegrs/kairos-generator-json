@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Exceptions\InvalidJsonSchemaTypeError.fs" />
+    <Compile Include="Exceptions\ParsingJsonSchemaError.fs" />
+    <Compile Include="Exceptions\GeneratingJsonDataError.fs" />
+    <Compile Include="SchemaProcessorConfig.fs" />
+    <Compile Include="NestedObjectProcessor.fs" />
+    <Compile Include="NestedItemProcessor.fs" />
+    <Compile Include="SchemaProcessor.fs" />
+    <Compile Include="SchemaProcessorFacade.fs" />
+    <Compile Include="JSchemaParserWrapper.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json.Schema" Version="3.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kairos.Generator.Randomizer\Kairos.Generator.Randomizer.fsproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="4.7.0" />
+  </ItemGroup>
+
+</Project>

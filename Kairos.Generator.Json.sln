@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{67B9A87C-8745-465F-9383-64D295E3F065}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5E86EA9E-096F-4BDA-9F2F-D630CFBC6913}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Kairos.Generator.Json", "src\Kairos.Generator.Json\Kairos.Generator.Json.fsproj", "{061E54A5-738C-4246-93E8-D4F12B5E5BFC}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Kairos.Generator.Randomizer", "src\Kairos.Generator.Randomizer\Kairos.Generator.Randomizer.fsproj", "{6145D8D9-4199-43E3-8B7B-85A5046A90DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{061E54A5-738C-4246-93E8-D4F12B5E5BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{061E54A5-738C-4246-93E8-D4F12B5E5BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{061E54A5-738C-4246-93E8-D4F12B5E5BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{061E54A5-738C-4246-93E8-D4F12B5E5BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6145D8D9-4199-43E3-8B7B-85A5046A90DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6145D8D9-4199-43E3-8B7B-85A5046A90DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6145D8D9-4199-43E3-8B7B-85A5046A90DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6145D8D9-4199-43E3-8B7B-85A5046A90DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{061E54A5-738C-4246-93E8-D4F12B5E5BFC} = {67B9A87C-8745-465F-9383-64D295E3F065}
+		{6145D8D9-4199-43E3-8B7B-85A5046A90DC} = {67B9A87C-8745-465F-9383-64D295E3F065}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15D6B593-4BBC-478A-AAC1-4451217FAC58}
+	EndGlobalSection
+EndGlobal

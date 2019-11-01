@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="TryParser.fs" />
+    <Compile Include="UpperCase.fs" />
+    <Compile Include="RangeUtility.fs" />
+    <Compile Include="RandomBoolean.fs" />
+    <Compile Include="RandomString.fs" />
+    <Compile Include="RandomDouble.fs" />
+    <Compile Include="RandomInt.fs" />
+    <Compile Include="RandomPositiveInt.fs" />
+    <Compile Include="RandomNegativeInt.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="4.7.0" />
+  </ItemGroup>
+</Project>
