@@ -39,3 +39,9 @@ steps:
   inputs:
     codeCoverageTool: Cobertura
     summaryFileLocation: $(Build.SourcesDirectory)/coverlet/reports/Cobertura.xml
+
+- task: PublishPipelineArtifact@1
+  displayName: 'Publish build artifact'
+  inputs:
+    path: $(System.DefaultWorkingDirectory)/bin/buildArtifact
+    artifact: Kairos.Generator.Json
