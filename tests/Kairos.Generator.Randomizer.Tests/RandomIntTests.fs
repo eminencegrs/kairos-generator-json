@@ -7,6 +7,12 @@ open Kairos.Generator.Randomizer
 module RandomIntTests =
 
     [<Fact>]
+    let ``Getting_Random_Non-negative_Int`` () =
+        let actualResult = RandomInt.getAny()
+        actualResult.Should().BeOfType(typeof<int>, "because it's expected to be 'int'") |> ignore
+        actualResult.Should().BeGreaterOrEqualTo(0, "because it's expected to be greater or equal to '0'") |> ignore
+
+    [<Fact>]
     let ``Getting_Random_Int_Beetween_minus10_and_10`` () =
         let actualResult = RandomInt.getAnyFromTo -10 10
         actualResult.Should().BeOfType(typeof<int>, "because it's expected to be 'int'") |> ignore

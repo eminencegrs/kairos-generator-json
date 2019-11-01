@@ -20,7 +20,7 @@ steps:
   displayName: 'Run unit tests'
   inputs:
     command: test
-    projects: '$(solution)'
+    projects: 'tests/*.Tests/*.fsproj'
     arguments: -c $(BuildConfiguration) --collect:"XPlat Code Coverage"
     nobuild: true
 
