@@ -1,7 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Kairos.Generator.Randomizer</PackageId>
+    <VersionPrefix>1.0</VersionPrefix>
+    <VersionPrefix Condition=" '$(buildId)' != '' ">$(VersionPrefix).$(buildId)</VersionPrefix>
+    <Company>Kairos</Company>
+    <Authors>Andrii Dariienko</Authors>
+    <IsPackable>false</IsPackable>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
+
   <ItemGroup>
     <Compile Include="TryParser.fs" />
     <Compile Include="UpperCase.fs" />
