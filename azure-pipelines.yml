@@ -7,6 +7,7 @@ variables:
   solution: 'Kairos.Generator.Json.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  buildId: '$(Build.BuildId)'
 
 steps:
 - task: DotNetCoreCLI@2

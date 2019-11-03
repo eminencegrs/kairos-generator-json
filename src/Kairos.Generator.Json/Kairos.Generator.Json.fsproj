@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Kairos.Generator.Json</PackageId>
-    <VersionPrefix>0.0</VersionPrefix>
-    <VersionPrefix Condition=" '$(BUILD_BUILDID)' != '' ">$(VersionPrefix).$(BUILD_BUILDID)</VersionPrefix>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <VersionPrefix Condition=" '$(buildId)' != '' ">$(VersionPrefix).$(buildId)</VersionPrefix>
     <Company>Kairos</Company>
     <Authors>Andrii Dariienko</Authors>
     <IsPackable>true</IsPackable>
