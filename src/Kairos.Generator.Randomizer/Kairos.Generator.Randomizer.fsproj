@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Kairos.Generator.Randomizer</PackageId>
+    <Description>It provides utility classes for generating random values.</Description>
+    <RepositoryUrl>https://github.com/eminencegrs/kairos-generator-json</RepositoryUrl>
     <VersionPrefix>1.0</VersionPrefix>
     <VersionPrefix Condition=" '$(buildId)' != '' ">$(VersionPrefix).$(buildId)</VersionPrefix>
     <Company>Kairos</Company>
