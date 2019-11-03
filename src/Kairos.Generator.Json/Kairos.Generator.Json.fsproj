@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Kairos.Generator.Json</PackageId>
+    <Description>This utility is dedicated to generating data based on a provided JSON schema.</Description>
+    <RepositoryUrl>https://github.com/eminencegrs/kairos-generator-json</RepositoryUrl>
     <VersionPrefix>1.0</VersionPrefix>
     <VersionPrefix Condition=" '$(buildId)' != '' ">$(VersionPrefix).$(buildId)</VersionPrefix>
     <Company>Kairos</Company>
