@@ -46,4 +46,4 @@ steps:
     command: 'push'
     packagesToPush: '$(Build.SourcesDirectory)/**/*.nupkg'
     nuGetFeedType: 'internal'
-    publishVstsFeed: 'c108f42d-f02c-48aa-91aa-81ff5815ca28'
+    vstsFeed: '6d2768a4-c92f-42cf-b394-a0ba6ec29704'
