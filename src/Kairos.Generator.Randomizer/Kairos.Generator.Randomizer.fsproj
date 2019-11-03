@@ -7,8 +7,8 @@
     <VersionPrefix Condition=" '$(buildId)' != '' ">$(VersionPrefix).$(buildId)</VersionPrefix>
     <Company>Kairos</Company>
     <Authors>Andrii Dariienko</Authors>
-    <IsPackable>false</IsPackable>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
